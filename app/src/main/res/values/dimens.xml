@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_size">40dp</dimen>
+    <dimen name="version_size">15dp</dimen>
+    <dimen name="version_spacing">3dp</dimen>
+    <dimen name="screen_title_size">40dp</dimen>
+    <dimen name="menu_item_size">34dp</dimen>
+
+    <dimen name="tablero_layout_300">280dp</dimen>
+    <dimen name="celda_80">60dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+
+
+    <!-- Tamaño del botón -->
+    <dimen name="button_side">35dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

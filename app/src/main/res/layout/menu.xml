@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/galaxia"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/TextViewTopTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="top|center"
+        android:text="@string/menu"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/logo_size"></TextView>
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="5">
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            tools:visibility="visible"></TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal">
+
+        </TableRow>
+    </TableLayout>
+
+
+    <TextView
+
+        android:id="@+id/TextViewPlay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/playGame1"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/menu_item_size"></TextView>
+    <TextView
+
+        android:id="@+id/TextViewPlay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/playGame2"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/menu_item_size"></TextView>
+
+    <TextView
+        android:id="@+id/TextViewScores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/viewScore"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/menu_item_size"></TextView>
+
+
+
+    <TextView
+        android:id="@+id/TextViewSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/settings"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/menu_item_size"></TextView>
+
+
+
+    <TextView
+        android:id="@+id/TextViewHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/help"
+        android:textColor="@color/logo_color"
+        android:textSize="@dimen/menu_item_size"></TextView>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pinguino"></ImageView>
+
+</LinearLayout>
