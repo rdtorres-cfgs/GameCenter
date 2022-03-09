@@ -10,33 +10,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.2048">
 
-    <activity
-        android:name=".Game2048"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-    <activity
-        android:name=".GamePeg"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-    <activity
-        android:name=".MenuScores"
-        android:theme="@style/Theme.AppCompat.NoActionBar" />
-    <activity
-        android:name=".Menu"
-        android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
-        </activity>
+            android:name=".Games.Game2048"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Login"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".Credentials.Settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Games.GamePeg"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Scores.MenuScores"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Games.Menu"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Credentials.Login"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Scores.Game2048Score"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Scores.GamePegScore"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Games.SplashActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".Credentials.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
     </application>
 </manifest>

@@ -1,7 +1,8 @@
-package com.example.gamecenter;
+package com.example.gamecenter.Games;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.GestureDetector;
@@ -13,9 +14,11 @@ import android.widget.Chronometer;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.gamecenter.R;
+import com.example.gamecenter.Utils.DBHelper;
+
 import java.util.Random;
 
-//GEnerar metodo que contorle el random
 
 public class Game2048 extends AppCompatActivity implements GestureDetector.OnGestureListener {
     private static int min_distance = 100;
@@ -24,23 +27,33 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
     private float x1, x2, y1, y2;
     private Button[][] matrix = new Button[4][4];
     private boolean gameOver = false;
-    private int total = 0;
-    private int totalScore = total;
+    private int total;
+    //private int totalScore = total;
+    private int maxScore;
     private View v;
     Chronometer crono;
-    long Time = 0;
-
+    //long Time = 0;
+    DBHelper helper;
+    SQLiteDatabase db;
+    String username;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game2048);
+        username = getIntent().getExtras().getString("usuario");
         gestureDetector = new GestureDetector(this, this);
 
-        //valorHighScore = (Button) findViewById(R.id.highScore);
         crono = (Chronometer) findViewById(R.id.Timer);
         crono.setBase(SystemClock.elapsedRealtime());
         crono.start();
+
+        helper = new DBHelper(this);
+        db = helper.getReadableDatabase();
+        maxScore = helper.buscarMaxPuntuacion2048(username, maxScore);
+        String StringMaxScore = Integer.toString(maxScore);
+        Button maxScoreButton = (Button) findViewById(R.id.maxScore);
+        maxScoreButton.setText(StringMaxScore);
 
         insertarMatrixTablero();
         generarNumRandom();
@@ -58,11 +71,35 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
         stop.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
-                startActivity(new Intent(Game2048.this, Menu.class));
-                ;
-                ;
+                Intent game2048 = new Intent(Game2048.this, Menu.class);
+                game2048.putExtra("usuario", username);
+                startActivity(game2048);
             }
         });
+    }
+
+    public boolean checkGameOver() {
+        if ((revisionMovimientoIzquierda() == false && revisionMovimientoAbajo() == false &&
+                revisionMovimientoArriba() == false && revisionMovimientoDerecha() == false)) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("GameOver");
+            builder.setMessage("Has perdido");
+            if (total > maxScore) {
+                helper.modificarPuntuacion2048(username, db, total, crono.getText().toString());
+                crono.stop();
+            }
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(getApplicationContext(), Menu.class);
+                    Game2048.this.finish();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            return true;
+        }
+        return false;
     }
 
     public void repintarValoresEnCasillas() {
@@ -100,29 +137,6 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
         }
     }
 
-
-    public boolean checkGameOver() {
-        if ((revisionMovimientoIzquierda() == false && revisionMovimientoAbajo() == false &&
-                revisionMovimientoArriba() == false && revisionMovimientoDerecha() == false)) {
-            crono.stop();
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Looser PRINGADO");
-            builder.setMessage("Has perdido");
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    Intent intent = new Intent(getApplicationContext(), Menu.class);
-                    Game2048.this.finish();
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-            return true;
-        }
-        return false;
-    }
-
-
     public boolean onTouchEvent(MotionEvent e) {
         gestureDetector.onTouchEvent(e);
         switch (e.getAction()) {
@@ -147,8 +161,6 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
                             generarNumRandom();
                             checkGameOver();
                         }
-
-//                        Toast.makeText(this, "Derecha", Toast.LENGTH_SHORT).show();
                     } else {
                         if (revisionMovimientoIzquierda()) {
                             movimientoIzquierda();
@@ -157,7 +169,6 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
                             generarNumRandom();
                             checkGameOver();
                         }
-//                        Toast.makeText(this, "Izquierda", Toast.LENGTH_LONG).show();
                     }
                 } else if (Math.abs(valueY) > min_distance) {
                     if (y2 > y1) {
@@ -168,7 +179,6 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
                             generarNumRandom();
                             checkGameOver();
                         }
-//                        Toast.makeText(this, "Abajo", Toast.LENGTH_SHORT).show();
                     } else {
                         if (revisionMovimientoArriba()) {
                             movimientoArriba();
@@ -177,7 +187,6 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
                             generarNumRandom();
                             checkGameOver();
                         }
-//                        Toast.makeText(this, "arriba", Toast.LENGTH_SHORT).show();
                     }
                 }
         }
@@ -202,7 +211,6 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
         }
         matrix[filas][columnas].setText(resultRandomNumber);
         repintarValoresEnCasillas();
-        //matrix[0][0].setText(resultRandomNumber);
     }
 
     public void insertarMatrixTablero() {

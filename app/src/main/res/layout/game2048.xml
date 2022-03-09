@@ -12,12 +12,16 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:id="@+id/maxScore"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="2"
-            android:text="2048"
-            android:textSize="45dp" />
+            android:background="#bbada0"
+            android:text="0"
+            android:textSize="34sp"
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +37,7 @@
             android:background="#bbada0"
             android:text="0"
             android:textSize="34sp"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp" />
 
         <Chronometer
             android:id="@+id/Timer"
@@ -46,8 +50,7 @@
             android:textSize="30sp"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:layout_marginLeft="5dp"
-            />
+            android:layout_marginLeft="5dp" />
 
     </LinearLayout>
 
@@ -60,16 +63,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/title"
-            android:textSize="15dp" />
+            android:text="Max Score"
+            android:textColor="#fe8205"
+            android:textSize="20dp"
+            android:background="#fbf8ef" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:fontFamily="cursive"
+            android:layout_marginStart="45dp"
+            android:textColor="#fe8205"
             android:layout_marginLeft="10dp"
-            android:text="@string/_2048_title"
-            android:textSize="18dp" />
+            android:text="Current Score"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -85,8 +91,18 @@
             android:textColor="#fe8205"
             android:textSize="25dp"
             android:background="#fbf8ef"
-            android:textAlignment="viewStart"
-            android:layout_weight="1"></Button>
+            android:textAlignment="viewStart"></Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:textColor="#fe8205"
+            android:textSize="25dp"
+            android:background="#fbf8ef"
+            android:text="2048" />
 
         <Button
             android:id="@+id/stopButton"
