@@ -2,6 +2,7 @@ package com.example.gamecenter.Games;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -39,6 +40,7 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game2048);
         username = getIntent().getExtras().getString("usuario");
@@ -125,7 +127,7 @@ public class Game2048 extends AppCompatActivity implements GestureDetector.OnGes
                 } else if (matrix[i][j].getText().equals("256")) {
                     matrix[i][j].setBackground(getDrawable(R.color.dosciencentayseis));
                 } else if (matrix[i][j].getText().equals("512")) {
-                    matrix[i][j].setBackground(getDrawable(R.color.quiñientosdoce));
+                    matrix[i][j].setBackground(getDrawable(R.color.quinientosdoce));
                 } else if (matrix[i][j].getText().equals("1024")) {
                     matrix[i][j].setBackground(getDrawable(R.color.mil));
                 } else if (matrix[i][j].getText().equals("2048")) {

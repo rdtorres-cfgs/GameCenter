@@ -2,6 +2,7 @@ package com.example.gamecenter.Scores;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,7 @@ public class GamePegScore extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score_game_peg);
         username = getIntent().getExtras().getString("usuario");

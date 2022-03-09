@@ -3,6 +3,7 @@ package com.example.gamecenter.Scores;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,7 @@ public class MenuScores extends AppCompatActivity {
     TextView Back;
 
     public void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_scores);
         username = getIntent().getExtras().getString("usuario");

@@ -3,6 +3,7 @@ package com.example.gamecenter.Scores;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +27,7 @@ public class Game2048Score extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score_game2048);
         username = getIntent().getExtras().getString("usuario");

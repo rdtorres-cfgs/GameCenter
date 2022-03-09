@@ -2,6 +2,7 @@ package com.example.gamecenter.Games;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import com.example.gamecenter.Credentials.RegisterActivity;
@@ -15,6 +16,7 @@ public class SplashActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

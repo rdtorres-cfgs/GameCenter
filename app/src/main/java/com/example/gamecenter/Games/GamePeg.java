@@ -2,6 +2,7 @@ package com.example.gamecenter.Games;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -31,6 +32,7 @@ public class GamePeg extends AppCompatActivity {
     String username;
 
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gamepeg);
         username = getIntent().getExtras().getString("usuario");
