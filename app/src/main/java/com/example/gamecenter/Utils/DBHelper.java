@@ -217,7 +217,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             "USUARIO                  " + user + "\n" +
                             "PUNTUACION:         " + puntuacion + "\n" +
                             "TIEMPO:                   " + tiempo + "\n";
-                    Log.d(TAG, "cursor  usuario: " + user + " |  puntuacion 2048: " + puntuacion + "|  TIEMPO 2048: " + tiempo);
                 }
                 textView.setText(linea);
                 c.close();
@@ -274,7 +273,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             "USUARIO                  " + user + "\n" +
                             "PUNTUACION:         " + puntuacion + "\n" +
                             "TIEMPO:                   " + tiempo + "\n";
-                    Log.d(TAG, "cursor  usuario: " + user + " |  puntuacion 2048: " + puntuacion + "|  TIEMPO 2048: " + tiempo);
                 }
                 textView.setText(linea);
                 c.close();
@@ -330,7 +328,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             "USUARIO                  " + user + "\n" +
                             "PUNTUACION:         " + puntuacion + "\n" +
                             "TIEMPO:                   " + tiempo + "\n";
-                    Log.d(TAG, "cursor  usuario: " + user + " |  puntuacion 2048: " + puntuacion + "|  TIEMPO 2048: " + tiempo);
                 }
                 textView.setText(linea);
                 c.close();
@@ -386,7 +383,6 @@ public class DBHelper extends SQLiteOpenHelper {
                             "USUARIO                  " + user + "\n" +
                             "PUNTUACION:         " + puntuacion + "\n" +
                             "TIEMPO:                   " + tiempo + "\n";
-                    Log.d(TAG, "cursor  usuario: " + user + " |  puntuacion 2048: " + puntuacion + "|  TIEMPO 2048: " + tiempo);
                 }
                 textView.setText(linea);
                 c.close();

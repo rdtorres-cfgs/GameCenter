@@ -103,7 +103,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell03"
@@ -111,7 +111,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell04"
@@ -120,7 +120,7 @@
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell05"
@@ -164,7 +164,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell13"
@@ -172,7 +172,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell14"
@@ -180,7 +180,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell15"
@@ -206,7 +206,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell21"
@@ -214,7 +214,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell22"
@@ -222,7 +222,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell23"
@@ -230,7 +230,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell24"
@@ -238,7 +238,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell25"
@@ -246,7 +246,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell26"
@@ -254,7 +254,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell30"
@@ -262,7 +262,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell31"
@@ -270,7 +270,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell32"
@@ -278,7 +278,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell33"
@@ -295,7 +295,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell35"
@@ -303,7 +303,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell36"
@@ -311,7 +311,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell40"
@@ -319,7 +319,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell41"
@@ -327,7 +327,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell42"
@@ -335,7 +335,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell43"
@@ -343,7 +343,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell44"
@@ -351,7 +351,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell45"
@@ -359,7 +359,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell46"
@@ -367,7 +367,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell50"
@@ -393,7 +393,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell53"
@@ -401,7 +401,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell54"
@@ -409,7 +409,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell55"
@@ -453,7 +453,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell63"
@@ -461,7 +461,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell64"
@@ -469,7 +469,7 @@
             android:layout_height="50dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:background="@drawable/ficha_shape_noclicked" />
+            android:background="@drawable/ficha_shape_llena" />
 
         <ImageView
             android:id="@+id/cell65"

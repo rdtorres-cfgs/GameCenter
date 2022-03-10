@@ -80,6 +80,7 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:text="Save"
+        android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/logo_color"
         app:layout_constraintStart_toStartOf="parent"

@@ -69,7 +69,7 @@ public class GamePeg extends AppCompatActivity {
         for (int i = 0; i < matrixImageView.length; i++) {
             for (int j = 0; j < matrixImageView[0].length; j++) {
                 if (matrixImageView[i][j].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())) {
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())) {
                     numeroCasillasRellenas++;
                 }
             }
@@ -83,17 +83,17 @@ public class GamePeg extends AppCompatActivity {
             for (int j = 0; j < matrixImageView[0].length - 2; j++) {
                 //Izquierda-Derecha (Derecha)
                 if (matrixImageView[i][j].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i][j + 1].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i][j + 2].getBackground().getConstantState().equals(
                         getResources().getDrawable(R.drawable.ficha_shape_vacia, null).getConstantState())) {
                     return false;
                 }//Izquierda-Derecha (Izquierda)
                 if (matrixImageView[i][j + 1].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i][j + 2].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i][j].getBackground().getConstantState().equals(
                         getResources().getDrawable(R.drawable.ficha_shape_vacia, null).getConstantState())) {
                     return false;
@@ -104,17 +104,17 @@ public class GamePeg extends AppCompatActivity {
             for (int j = 0; j < matrixImageView[0].length; j++) {
                 //Arriba-abajo (Abajo)
                 if (matrixImageView[i][j].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i + 1][j].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i + 2][j].getBackground().getConstantState().equals(
                         getResources().getDrawable(R.drawable.ficha_shape_vacia, null).getConstantState())) {
                     return false;
                 }//Arriba-abajo (Arriba)
                 if (matrixImageView[i + 1][j].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i + 2][j].getBackground().getConstantState().equals(
-                        getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                        getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                         && matrixImageView[i][j].getBackground().getConstantState().equals(
                         getResources().getDrawable(R.drawable.ficha_shape_vacia, null).getConstantState())) {
                     return false;
@@ -147,12 +147,12 @@ public class GamePeg extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if (firstClick && matrixImageView[finalI][finalJ].getBackground().getConstantState().equals(
-                                getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())
+                                getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())
                                 || firstClick && matrixImageView[finalI][finalJ].getBackground().getConstantState().equals(
                                 getResources().getDrawable(R.drawable.ficha_shape_clicked, null).getConstantState())) {
                             if (matrixImageView[iV_selectedI][iV_selectedJ].getBackground().getConstantState().equals(
-                                    getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())) {
-                                matrixImageView[iV_selectedI][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_noclicked);
+                                    getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())) {
+                                matrixImageView[iV_selectedI][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_llena);
                             }
                             matrixImageView[finalI][finalJ].setBackgroundResource(R.drawable.ficha_shape_clicked);
                             iV_selectedI = finalI;
@@ -203,8 +203,8 @@ public class GamePeg extends AppCompatActivity {
                                 }
                             }
                         } else if (!firstClick && matrixImageView[finalI][finalJ].getBackground().getConstantState().equals(
-                                getResources().getDrawable(R.drawable.ficha_shape_noclicked, null).getConstantState())) {
-                            matrixImageView[iV_selectedI][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_noclicked);
+                                getResources().getDrawable(R.drawable.ficha_shape_llena, null).getConstantState())) {
+                            matrixImageView[iV_selectedI][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_llena);
                             matrixImageView[finalI][finalJ].setBackgroundResource(R.drawable.ficha_shape_clicked);
                             iV_selectedI = finalI;
                             iV_selectedJ = finalJ;
@@ -237,7 +237,7 @@ public class GamePeg extends AppCompatActivity {
                 // Bola Medio
                 matrixImageView[iV_selectedI - 1][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_vacia);
                 //Ultima Bola
-                matrixImageView[iV_selectedI - 2][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_noclicked);
+                matrixImageView[iV_selectedI - 2][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_llena);
                 firstClick = true;
             }
             //Arriba - Abajo
@@ -247,7 +247,7 @@ public class GamePeg extends AppCompatActivity {
                 // Bola Medio
                 matrixImageView[iV_selectedI + 1][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_vacia);
                 //Ultima Bola
-                matrixImageView[iV_selectedI + 2][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_noclicked);
+                matrixImageView[iV_selectedI + 2][iV_selectedJ].setBackgroundResource(R.drawable.ficha_shape_llena);
                 firstClick = true;
             }
         } else if (iV_selectedI == finalI) {
@@ -258,7 +258,7 @@ public class GamePeg extends AppCompatActivity {
                 // Bola Medio
                 matrixImageView[iV_selectedI][iV_selectedJ + 1].setBackgroundResource(R.drawable.ficha_shape_vacia);
                 //Ultima Bola
-                matrixImageView[iV_selectedI][iV_selectedJ + 2].setBackgroundResource(R.drawable.ficha_shape_noclicked);
+                matrixImageView[iV_selectedI][iV_selectedJ + 2].setBackgroundResource(R.drawable.ficha_shape_llena);
                 firstClick = true;
 
             }
@@ -269,7 +269,7 @@ public class GamePeg extends AppCompatActivity {
                 // Bola Medio
                 matrixImageView[iV_selectedI][iV_selectedJ - 1].setBackgroundResource(R.drawable.ficha_shape_vacia);
                 //Ultima Bola
-                matrixImageView[iV_selectedI][iV_selectedJ - 2].setBackgroundResource(R.drawable.ficha_shape_noclicked);
+                matrixImageView[iV_selectedI][iV_selectedJ - 2].setBackgroundResource(R.drawable.ficha_shape_llena);
                 firstClick = true;
             }
         } else {

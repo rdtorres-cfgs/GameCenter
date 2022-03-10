@@ -6,13 +6,27 @@
     android:background="@drawable/galaxia"
     android:padding="10dp"
     tools:context=".Games.SplashActivity">
+    <TextView
+        android:id="@+id/title_login"
+        android:textColor="@color/logo_color"
+        android:backgroundTint="@color/white"
+        android:gravity="top|center"
+        android:textColorHint="@color/logo_color"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Game Center"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/logo_size">
 
+    </TextView>
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:hint="Username"
+        android:layout_below="@+id/title_login"
         android:textColorHint="@color/logo_color"
         android:textStyle="bold" />
 
@@ -59,5 +73,13 @@
         android:textColor="@color/logo_color"
         android:textColorHint="@color/logo_color"
         android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pinguino"
+        android:layout_below="@+id/btnsignin">
+    </ImageView>
 
 </RelativeLayout>
