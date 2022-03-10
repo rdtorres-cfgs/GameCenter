@@ -31,6 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase mReadableDB;
 
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS user (username TEXT PRIMARY KEY, password TEXT NOT NULL, " +
@@ -43,6 +44,11 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /**
+     * @param user
+     * @param score
+     * @return Devuelve el valor que hay en la bbdd del score de dicho usuario
+     */
     public int buscarMaxPuntuacion2048(String user, int score) {
         boolean found = false;
         int aux = 0;
@@ -64,6 +70,13 @@ public class DBHelper extends SQLiteOpenHelper {
         return aux;
     }
 
+    /**
+     * Update del score y tiempo del usuario logeado
+     * @param usuario
+     * @param db
+     * @param score_2048
+     * @param time_2048
+     */
     public void modificarPuntuacion2048(String usuario, SQLiteDatabase db, int score_2048, String time_2048) {
         Log.d(TAG, "entramos modificar puntuacio del usuario " + usuario + " | puntuacion nueva es: " + score_2048 + " | tiempo nuevo es: " + time_2048);
         ContentValues values = new ContentValues();
@@ -81,6 +94,11 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "nuevo valor " + score_2048 + time_2048 + " filas afectadas: " + count);
     }
 
+    /**
+     * @param user
+     * @param score
+     * @return Devuelve el valor que hay en la bbdd del score de dicho usuario
+     */
     public int buscarMaxPuntuacionPeg(String user, int score) {
         boolean found = false;
         int aux = 0;
@@ -102,6 +120,13 @@ public class DBHelper extends SQLiteOpenHelper {
         return aux;
     }
 
+    /**
+     * Update del score y tiempo del usuario logeado
+     * @param usuario
+     * @param db
+     * @param score_peg
+     * @param time_peg
+     */
     public void modificarPuntuacionPeg(String usuario, SQLiteDatabase db, int score_peg, String time_peg) {
         Log.d(TAG, "entramos modificar puntuacio del usuario " + usuario + " | puntuacion nueva es: " + score_peg + " | tiempo nuevo es: " + time_peg);
         ContentValues values = new ContentValues();
@@ -119,6 +144,12 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "nuevo valor " + score_peg + time_peg + " filas afectadas: " + count);
     }
 
+    /**
+     * Añade un nuevo usuario
+     * @param newUser
+     * @param newPass
+     * @return
+     */
     public boolean insertNewUser(String newUser, String newPass) {
         boolean inserted = false;
         if (this.mWritableDB == null) {
@@ -140,6 +171,12 @@ public class DBHelper extends SQLiteOpenHelper {
         return inserted;
     }
 
+    /**
+     * Cambia el password de dicho usuario.
+     * @param username
+     * @param password
+     * @return
+     */
     public boolean changePassword(String username, String password) {
         boolean updated = false;
         if (this.mWritableDB == null) {
@@ -157,6 +194,12 @@ public class DBHelper extends SQLiteOpenHelper {
         return updated;
     }
 
+    /**
+     * Método para cuando logea un Usuario poder comprobar sus credenciales
+     * @param name
+     * @param password
+     * @return
+     */
     public boolean searchUser(String name, String password) {
         boolean found = false;
         if (this.mReadableDB == null) {
@@ -177,6 +220,12 @@ public class DBHelper extends SQLiteOpenHelper {
         return found;
     }
 
+    /**
+     * Metodo para hacer un Sort de la puntuacion
+     * @param textView
+     * @param db
+     * @param orderBy
+     */
     public void mostrarPuntuacion2048(TextView textView, SQLiteDatabase db, String orderBy) {
         Log.d(TAG, "entramos buscarPuntuacion2048 sort");
         String[] projection = {
@@ -232,6 +281,12 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "Salir de buscar puntuacion con todos los usuarios ordenados");
     }
 
+    /**
+     * Metodo para hacer un Sort de la puntuacion
+     * @param textView
+     * @param db
+     * @param orderBy
+     */
     public void mostrarPuntuacion2048Usuario(TextView textView, SQLiteDatabase db, String orderBy) {
         Log.d(TAG, "entramos buscarPuntuacion2048 sort");
         String[] projection = {
@@ -288,6 +343,12 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "Salir de buscar puntuacion con todos los usuarios ordenados");
     }
 
+    /**
+     * Metodo para hacer un Sort de la puntuacion
+     * @param textView
+     * @param db
+     * @param orderBy
+     */
     public void mostrarPuntuacionPeg(TextView textView, SQLiteDatabase db, String orderBy) {
         Log.d(TAG, "entramos buscarPuntuacion2048 sort");
         String[] projection = {
@@ -343,6 +404,12 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "Salir de buscar puntuacion con todos los usuarios ordenados");
     }
 
+    /**
+     *  Metodo para hacer un Sort de la puntuacion
+     * @param textView
+     * @param db
+     * @param orderBy
+     */
     public void mostrarPuntuacionPegUsuario(TextView textView, SQLiteDatabase db, String orderBy) {
         Log.d(TAG, "entramos buscarPuntuacion2048 sort");
         String[] projection = {
