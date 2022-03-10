@@ -59,11 +59,17 @@ public class GamePeg extends AppCompatActivity {
 
     }
 
+    /**
+     * Método para inicializar metodos
+     */
     public void Game() {
         matrix();
         detectarCasillaClicada();
     }
 
+    /**
+     * @return Devuelve el numero de fichas que tenemos para jugar.
+     */
     public int contarFichasRellenas() {
         int numeroCasillasRellenas = 0;
         for (int i = 0; i < matrixImageView.length; i++) {
@@ -78,6 +84,9 @@ public class GamePeg extends AppCompatActivity {
 
     }
 
+    /**
+     * @return Devuelve False si el game over se genera.
+     */
     public boolean checkGameOver() {
         for (int i = 0; i < matrixImageView.length; i++) {
             for (int j = 0; j < matrixImageView[0].length - 2; j++) {
@@ -125,6 +134,9 @@ public class GamePeg extends AppCompatActivity {
     }
 
 
+    /**
+     * Guarda los valores que tenemos en el Layaout en nuestra matriz Bidimensional.
+     */
     public void matrix() {
         matrixImageView = new ImageView[][]{
                 {findViewById(R.id.cell00), findViewById(R.id.cell01), findViewById(R.id.cell02), findViewById(R.id.cell03), findViewById(R.id.cell04), findViewById(R.id.cell05), findViewById(R.id.cell06)},
@@ -138,6 +150,9 @@ public class GamePeg extends AppCompatActivity {
     }
 
 
+    /**
+     * Comprueba la casilla que hemos cliclado y hace todo los metodos para jugar.
+     */
     public void detectarCasillaClicada() {
         for (int i = 0; i < matrixImageView.length; i++) {
             for (int j = 0; j < matrixImageView[0].length; j++) {
@@ -217,17 +232,11 @@ public class GamePeg extends AppCompatActivity {
         }
     }
 
-    public void borrarListener() {
-        for (int i = 0; i < matrixImageView.length; i++) {
-            for (int j = 0; j < matrixImageView[0].length; j++) {
-                matrixImageView[i][j].setOnClickListener(null);
-                {
-                }
-            }
-        }
-
-    }
-
+    /**
+     * El metodo realiza el cambio de figura al hacer el movimiento.
+     * @param finalJ Posicion J donde se encuentra la ficha
+     * @param finalI Posicion I donde se encuentra la ficha
+     */
     public void realizarMovimiento(int finalJ, int finalI) {
         // Abajo-Arriba
         if (iV_selectedJ == finalJ) {

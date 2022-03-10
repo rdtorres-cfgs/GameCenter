@@ -81,10 +81,16 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * @return Revisa que sean el mismo valor
+     */
     private boolean checkSamePassword() {
         return !editPassword.getText().toString().equals(editRepassword.getText().toString());
     }
 
+    /**
+     * @return Revisa que está vacio
+     */
     private boolean checkEmpty() {
         return editUsername.getText().toString().isEmpty() ||
                 editPassword.getText().toString().isEmpty() ||
